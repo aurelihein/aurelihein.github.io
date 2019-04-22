@@ -27,6 +27,27 @@
   <body>
 
     <header class="navbar navbar-fixed-top os-navbar" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header os-main-links">
+          <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <p>Captina</p>
+          </a>
+        </div>
+        <div id="os-navbar-links" class="collapse navbar-collapse navbar-right">
+          <ul id="main-nav" class="nav navbar-nav os-main-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#expertise">Expertise</a></li>
+            <li><a href="#competence">Compétence</a></li>
+            <li><a href="#Clients">Clients</a></li>
+            <li><a href="#contacts">Contacts</a></li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -48,6 +69,142 @@
       </div>
     </div>
 
+
+      <section id="main-section">
+        <div id="main-content" class="container">
+          <div id="items" class="row">
+            <div class="col-sm-3">
+              <div class="os-centered os-main-links">
+                <a class="btn" href="#expertise">
+                  <span class="fa-stack fa-3x os-green-color">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-hands-helping fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4>Expertise</h4>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="os-centered os-main-links">
+                <a class="btn" href="#competence">
+                  <span class="fa-stack fa-3x os-violet-color">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <!--<i class="fa fa-tools fa-stack-1x fa-inverse"></i>-->
+                    <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4>Compétences</h4>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="os-centered os-main-links">
+                <a class="btn" href="#clients">
+                  <span class="fa-stack fa-3x os-green-color">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-sim-card fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4>Clients</h4>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="os-centered os-main-links">
+                <a class="btn" href="#contact">
+                  <span class="fa-stack fa-3x os-bluepastel-color">
+                    <i class="fa fa-circle fa-stack-2x"></i>
+                    <i class="fa fa-file-signature fa-stack-1x fa-inverse"></i>
+                  </span>
+                  <h4>Contact</h4>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="expertise" class="os-no-striped os-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="os-section-title">
+                <h1>Expertise</h1>
+              </div>
+            </div>
+            <div class="col-md-8 os-border-left os-green-links">
+              <div class="os-section-content">
+                <p class="lead">Du cahier des charges ou de l'idée,</p>
+                <p class="lead">Tout au long du processus de développement,</p>
+                <p class="lead">De la réalisation d'un POC (Proof Of Concept)</p>
+                <p class="lead">Jusqu'à l'industrialisation d'un produit fini</p>
+                <ul>
+                  <li><a href="http://here" target="_blank"><strong>1.Specifications & Schedule:</strong></a> Captina help you identify your needs, and answer the need, not the question !</li>
+                  <li><a href="http://here" target="_blank"><strong>2.Software requierements:</strong></a> provides support for 3rd party and partner boards;</li>
+                  <li><a href="http://here" target="_blank"><strong>3.Board Support Package:</strong></a>Automake is enough ??? Maybe a Buildroot bsp ??? oh why not a debian distro ??? Check if an Android OS would be needed !! definately a perfect optimized yocto set-up ???</li>
+                  <li><a href="http://here" target="_blank"><strong>4.Hardware:</strong></a> provides images recipes, demo recipes, and packagegroups used to ease the development with Yocto Project.</li>
+                  <li><a href="http://here" target="_blank"><strong>5.Solution:</strong></a> provides images recipes, demo recipes, and packagegroups used to ease the development with Yocto Project.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="main-section"><div id="main-content" class="container"></br></div></section>
+
+      <section id="competence" class="os-striped os-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="os-section-title">
+                <h1>Compétences</h1>
+              </div>
+            </div>
+            <div class="col-md-8 os-border-left os-blue-links">
+              <div class="os-section-content">
+                <p class="lead">Ingénierie électronique : </p>
+                <ul>
+                  <li><a href="http://here" target="_blank"><strong>Hardware : </strong></a>Élaboration de schéma / Choix des composants / Routage de cartes</li>
+                  <li><a href="http://here" target="_blank"><strong>Firmware : </strong></a>Mise en place d'environnement logiciel BSP (linux : LTIB,Buildroot,Yocto ; IDE : ST/Microchip)</li>
+                </ul>
+                <p class="lead">Logiciel embarqué : </p>
+                <ul>
+                  <li><a href="http://here" target="_blank"><strong>Linux : </strong></a>Développement de logiciel applicatif (MQTT, Vidéo (Camera,Afficheur,Gstreamer/streaming,zoneminder), Upgrade OTA (mender.io) )</li>
+                  <li><a href="http://here" target="_blank"><strong>Collaboration avec Designer Ergonome applicatifs : </strong></a></li>
+                </ul>
+                <p class="lead">Conception et intégration mécanique : </p>
+                <ul>
+                  <li><a href="http://here" target="_blank"><strong>Linux : </strong></a>Collaboration avec Designer mécanique produits</li>
+                  <li><a href="http://here" target="_blank"><strong>Intégration mécatronique</strong></a></li>
+                  <li><a href="http://here" target="_blank"><strong>Suivi de développement d'outillage : </strong></a>moule pour plasturgie, filière pour tôlerie</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="main-section"><div id="main-content" class="container"></br></div></section>
+
+      <section id="clients" class="os-no-striped os-section">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="os-section-title">
+                <h1>Clients</h1>
+              </div>
+            </div>
+            <div class="col-md-8 os-border-left os-green-links">
+              <div class="os-section-content">
+                <p class="lead">Du cahier des charges ou de l'idée,</p>
+                <p class="lead">Tout au long du processus de développement,</p>
+                <p class="lead">De la réalisation d'un POC (Proof Of Concept)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="main-section"><div id="main-content" class="container"></br></div></section>
 
       <section id="contact" class="os-striped os-section">
         <div class="container-fluid">
