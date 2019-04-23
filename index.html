@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
@@ -35,24 +35,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">
-            <p>Captina</p>
-          </a>
         </div>
         <div id="os-navbar-links" class="collapse navbar-collapse navbar-right">
           <ul id="main-nav" class="nav navbar-nav os-main-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#expertise">Expertise</a></li>
-            <li><a href="#competence">Compétence</a></li>
-            <li><a href="#Clients">Clients</a></li>
-            <li><a href="#contacts">Contacts</a></li>
+            <li><a data-localize="coverage.title" href="#coverage">Coverage</a></li>
+            <li><a data-localize="skills.title" href="#skills">Skills</a></li>
+            <li><a data-localize="clients.title" href="#clients">Clients</a></li>
+            <li><a data-localize="contact.title" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </header>
 
-    <div id="content">
+    <div class="language">
+    <p>Language: </p>
+      <select id="languages">
+        <option value="en" >English</option>
+        <option value="fr" >Français</option>
+      </select>
+    </div>
 
+    <div id="content">
       <section id="header-section">
         <div id="header-container" class="container">
           <div id="overview">
@@ -75,24 +79,24 @@
           <div id="items" class="row">
             <div class="col-sm-3">
               <div class="os-centered os-main-links">
-                <a class="btn" href="#expertise">
+                <a class="btn" href="#coverage">
                   <span class="fa-stack fa-3x os-green-color">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-hands-helping fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h4>Expertise</h4>
+                  <h4 data-localize="coverage.title" >Coverage</h4>
                 </a>
               </div>
             </div>
             <div class="col-sm-3">
               <div class="os-centered os-main-links">
-                <a class="btn" href="#competence">
+                <a class="btn" href="#skills">
                   <span class="fa-stack fa-3x os-violet-color">
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <!--<i class="fa fa-tools fa-stack-1x fa-inverse"></i>-->
                     <i class="fa fa-cog fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h4>Compétences</h4>
+                  <h4 data-localize="skills.title" >Skills</h4>
                 </a>
               </div>
             </div>
@@ -103,7 +107,7 @@
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-sim-card fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h4>Clients</h4>
+                  <h4 data-localize="clients.title" >Clients</h4>
                 </a>
               </div>
             </div>
@@ -114,7 +118,7 @@
                     <i class="fa fa-circle fa-stack-2x"></i>
                     <i class="fa fa-file-signature fa-stack-1x fa-inverse"></i>
                   </span>
-                  <h4>Contact</h4>
+                  <h4 data-localize="contact.title" >Contact</h4>
                 </a>
               </div>
             </div>
@@ -122,12 +126,12 @@
         </div>
       </section>
 
-      <section id="expertise" class="os-no-striped os-section">
+      <section id="coverage" class="os-no-striped os-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-4">
               <div class="os-section-title">
-                <h1 data-localize="expert.title" >Expertise</h1>
+                <h1 data-localize="coverage.title" >Coverage</h1>
               </div>
             </div>
             <div class="col-md-8 os-border-left os-green-links">
@@ -151,12 +155,12 @@
 
       <section id="main-section"><div id="main-content" class="container"></br></div></section>
 
-      <section id="competence" class="os-striped os-section">
+      <section id="skills" class="os-striped os-section">
         <div class="container-fluid">
           <div class="row">
             <div class="col-md-4">
               <div class="os-section-title">
-                <h1 data-localize="skill.title" >Compétences</h1>
+                <h1 data-localize="skills.title" >Skills</h1>
               </div>
             </div>
             <div class="col-md-8 os-border-left os-blue-links">
@@ -190,7 +194,7 @@
           <div class="row">
             <div class="col-md-4">
               <div class="os-section-title">
-                <h1>Clients</h1>
+                <h1 data-localize="clients.title" >Clients</h1>
               </div>
             </div>
             <div class="col-md-8 os-border-left os-green-links">
@@ -228,7 +232,7 @@
       <div class="container os-centered">
         <div class="row">
           <div class="col-sm-8 col-sm-offset-2">
-            <p>Developed by Aurélien BOUIN-aurelihein</p>
+            <p data-localize="main.author" >Developed by Aurélien BOUIN-aurelihein</p>
           </div>
         </div>
       </div>
@@ -240,11 +244,39 @@
     <script src="js/perfect-scrollbar-mousewheel.min.js"></script>
     <script src="js/perfect-scrollbar.min.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/session.js"></script>
+
     <script type="text/javascript" charset="utf-8">
-      $(function(){
-        var opts = { language: "en", pathPrefix: "translations", skipLanguage: "fr" };
-        $("[data-localize]").localize("lang", opts)
-      })
+      function doLocalize(lang) {
+        if(lang === undefined) {
+          console.log("Undefined language, setting lang:en")
+          lang = "en";
+        }
+        session.languageKey = lang;
+        Session.setItem("session", session);
+        $("[data-localize]").localize("translations/lang", {language: lang});
+      }
+      function onLanguageItemChange() {
+        console.log("Something happenned")
+        var lang = $("select#languages option:selected").val();
+        console.log("new lang:"+lang)
+        doLocalize(lang);
+      };
+
+      var session = Session.getItem("session");
+      var lang = session.languageKey;
+      console.log("Initial session.languageKey :"+lang)
+      doLocalize(lang);
+      $(".language select").val(lang);
+
+      $(".language select").bind('change', function() {
+        lang = this.value
+        console.log("Change language into :"+lang)
+        doLocalize(lang);
+        document.location.reload(true)
+        return false;
+      });
+
     </script>
   </body>
 </html>

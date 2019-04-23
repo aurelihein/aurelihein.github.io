@@ -1,5 +1,20 @@
 {
-  "skill": {
+  "coverage": {
+    "title": "Couverture"
+  },
+  "skills": {
+    "title": "Compétences"
+  },
+  "clients": {
+    "title": "Clients"
+  },
+  "contact": {
+    "title": "Contact"
+  },
+  "main": {
+    "author": "Développé par Aurélien BOUIN-aurelihein"
+  },
+  "test": {
     "title": "Skills",
     "input": "input success",
     "input_as_obj": {
