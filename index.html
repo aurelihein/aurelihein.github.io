@@ -34,6 +34,7 @@
 
     <header class="navbar navbar-fixed-top os-navbar" role="navigation">
       <div class="container-fluid">
+
         <div class="navbar-header os-main-links">
           <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button">
             <span class="sr-only">Toggle navigation</span>
@@ -41,17 +42,6 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-        </div>
-
-        <div id="os-navbar-links" class="collapse navbar-collapse navbar-right">
-         <ul>
-          <div class="language">
-            <select id="languages" class="selectpicker">
-              <option value="en" >English</option>
-              <option value="fr" >Français</option>
-            </select>
-          </div>
-         </ul>
         </div>
 
         <div id="os-navbar-links" class="collapse navbar-collapse navbar-left">
@@ -63,6 +53,24 @@
             <li><a data-localize="contact.title" href="#contact">Contact</a></li>
           </ul>
         </div>
+
+        <div id="os-navbar-links" class="collapse navbar-collapse navbar-right">
+          <ul id="main-nav" class="nav navbar-nav os-main-links languageSwitcher">
+                <li><a href="#" id="en" data-lang="en">English</a></li>
+                <li><a href="#" id="fr" data-lang="fr">Français</a></li>
+          </ul>
+            </div>
+        </div>
+
+<!--
+        <div id="os-navbar-links" class="language collapse navbar-collapse navbar-right">
+            <select id="languages" class="selectpicker">
+              <option value="en" data-content='<span class="flag-icon flag-icon-us"></span> English' >English</option>
+              <option value="fr" >Français</option>
+            </select>
+        </div>
+-->
+
       </div>
     </header>
 <!--
@@ -273,38 +281,5 @@
     <script src="js/perfect-scrollbar.min.js"></script>
     <script src="js/main.js"></script>
     <script src="js/session.js"></script>
-
-    <script type="text/javascript" charset="utf-8">
-      function doLocalize(lang) {
-        if(lang === undefined) {
-          console.log("Undefined language, setting lang:en")
-          lang = "en";
-        }
-        session.languageKey = lang;
-        Session.setItem("session", session);
-        $("[data-localize]").localize("translations/lang", {language: lang});
-      }
-      function onLanguageItemChange() {
-        console.log("Something happenned")
-        var lang = $("select#languages option:selected").val();
-        console.log("new lang:"+lang)
-        doLocalize(lang);
-      };
-
-      var session = Session.getItem("session");
-      var lang = session.languageKey;
-      console.log("Initial session.languageKey :"+lang)
-      doLocalize(lang);
-      $(".language select").val(lang);
-
-      $(".language select").bind('change', function() {
-        lang = this.value
-        console.log("Change language into :"+lang)
-        doLocalize(lang);
-        document.location.reload(true)
-        return false;
-      });
-
-    </script>
   </body>
 </html>

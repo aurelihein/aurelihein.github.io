@@ -44,7 +44,6 @@ $('document').ready(function() {
         function HeaderSection() {
             this.elem = $("section#header-section");
         };
-        return HeaderSection;
 
         HeaderSection.prototype.updateHeight = function(windowHeight, mainSectionHeight) {
             var initialHeaderHeight = windowHeight - mainSectionHeight;
@@ -173,7 +172,7 @@ $('document').ready(function() {
 
     if(!$isMobile()) {
         $updateNavbarAndBackButton();
-        $handlerHeaderSection.updateHeight($window.height(), $handlerMainSection.getOuterHeight());
+//        $handlerHeaderSection.updateHeight($window.height(), $handlerMainSection.getOuterHeight());
     } else {
         // Initilaize the custom scrollbar
         $('.os-code-install').perfectScrollbar({
@@ -195,7 +194,7 @@ $('document').ready(function() {
 
     $window.resize(function() {
         if(!$isMobile()) {
-            $handlerHeaderSection.updateHeight($window.height(), $handlerMainSection.getOuterHeight());
+//            $handlerHeaderSection.updateHeight($window.height(), $handlerMainSection.getOuterHeight());
         }
     });
 
@@ -231,3 +230,17 @@ $('document').ready(function() {
 
     /*******************************************************************************************************/
 });
+
+    /***************************************** Language handle *********************************************/
+    //Auto detect language
+    $("[data-localize]").localize("translations/lang")
+    //Handle link language in case of bad guess
+    $(".languageSwitcher a").on({
+      click: function () {
+        lang = $(this).attr("data-lang");
+        console.log("lang:"+lang)
+        $("[data-localize]").localize("translations/lang", {language: lang});
+        return false;
+       }
+    });
+    /*******************************************************************************************************/

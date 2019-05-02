@@ -21,7 +21,6 @@
 .os-navbar #main-nav a {
     font-weight: bold;
 }
-
 .os-navbar a.navbar-brand, .os-navbar #main-nav a {
     -webkit-transition: color 0.15s linear;
     transition: color 0.15s linear;
@@ -35,6 +34,10 @@
 .os-navbar .navbar-nav > li > a {
     padding: 25px;
     text-transform: uppercase;
+}
+
+.languageSwitcher {
+    font-style: italic;
 }
 
 .os-navbar a:hover, .os-navbar .navbar-nav > li > a:hover, .os-navbar .navbar-nav > li > a:focus {
