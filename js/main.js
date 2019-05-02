@@ -44,6 +44,7 @@ $('document').ready(function() {
         function HeaderSection() {
             this.elem = $("section#header-section");
         };
+        return HeaderSection;
 
         HeaderSection.prototype.updateHeight = function(windowHeight, mainSectionHeight) {
             var initialHeaderHeight = windowHeight - mainSectionHeight;
@@ -104,12 +105,11 @@ $('document').ready(function() {
     // Update the navigation bar and the "back to top" button depending of window position
     var $updateNavbarAndBackButton = function() {
         var firstElementAfterMainSection = $handlerMainSection.topOfNextElement();
-
         if($window.scrollTop() >= (firstElementAfterMainSection - $handlerNavbar.getOuterHeight())) {
-            $handlerNavbar.show();
+            //$handlerNavbar.show();
             $handlerBackButton.show();
         } else {
-            $handlerNavbar.hide();
+            //$handlerNavbar.hide();
             $handlerBackButton.hide();
         }
     }
