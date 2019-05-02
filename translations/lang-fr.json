@@ -1,6 +1,59 @@
 {
-  "coverage": {
-    "title": "Couverture"
+  "speciality_1": {
+    "title": "Ingénierie Électronique",
+    "item_generale" : "Élaboration de schéma / Choix des composants / Routage de cartes / Intégration mécatronique",
+    "item_1" : "Alimentation : ",
+    "item_1_1": "TI, OnSemi",
+    "item_2": "Processeurs / Plateformes :",
+    "item_2_1": "ST32, ARM (iMX), PowerPC, DSP, FPGA, Raspberry Pi",
+    "item_3": "Bus d'interface :",
+    "item_3_1": "DDRAM, RGMII, PCIe, SDCARD, NOR, NAND, USB, SSI, SPI, I2C, GPIO, UART, RTC, Relais, Codecs, TFT, TouchScreen, CMOS, WiFi,",
+    "item_4": "Logiciel de routage :",
+    "item_4_1": "ST32, ARM (iMX), PowerPC, DSP, FPGA, Raspberry Pi"
+  },
+  "speciality_2": {
+    "title": "Ingénierie Logicielle Embarquée",
+    "item_generale" : "Mise en place d'environnement & logiciels embarqués",
+    "item_1" : "Bootloader :",
+    "item_1_1": "U-Boot, Barebox",
+    "item_2": "OS & drivers :",
+    "item_2_1": "Linux, Android, uC",
+    "item_3": "BSP :",
+    "item_3_1": "LTIB, Buildroot, Yocto",
+    "item_4": "IDE :",
+    "item_4_1": "ST, Microchip, Eclipse",
+    "item_5": "Cloud-Compiling :",
+    "item_5_1": "Mise en place de système cloud de compilation et mise à jour à distance :  docker, jenkins, yocto",
+    "item_6": "Cloud OTA :",
+    "item_6_1": "Mise à jour via le cloud : mender.io"
+  },
+  "speciality_3": {
+    "title": "Ingénierie Logicielle Applicative",
+    "item_generale" : "Développement de logiciels applicatifs plus haut niveau",
+    "item_1" : "IoT :",
+    "item_1_1": "MQTT",
+    "item_2": "Vidéo affichage & capture :",
+    "item_2_1": "Gstreamer, FFMPEG, zoneminder, motion, kodi",
+    "item_3": "VOIP / SIP :",
+    "item_3_1": "PJSIP, linphone, Asterisk, SIPP, ALSA, H264, VP8",
+    "item_4": "Android / iOS :",
+    "item_4_1": "Développement d'applications en collaboration avec Designer Ergonome applicatifs",
+    "item_5": "WEB :",
+    "item_5_1": "WPE, webkit",
+    "item_6": "Environnement :",
+    "item_6_1": "Wayland, GTK",
+    "item_7": "Domotique :",
+    "item_7_1": "Domoticz",
+    "item_8": "Intelligence Artificielle :",
+    "item_8_1": "TensorFlow,"
+  },
+  "speciality_4": {
+    "title": "Gestion de projets",
+    "item_generale" : "Pilotage d'équipes sur des projets avec multiples intervenants",
+    "item_1" : "Négociation des composants avec les distributeurs ",
+    "item_2": "Collaboration avec Designer mécanique produits",
+    "item_3": "Suivi de sous traitances de production de cartes",
+    "item_4": "Suivi de développement d'outillage : moule pour plasturgie, filière pour tôlerie"
   },
   "skills": {
     "title": "Compétences"

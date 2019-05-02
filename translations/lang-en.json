@@ -1,6 +1,11 @@
 {
   "coverage": {
-    "title": "Coverage-en"
+    "title": "Coverage",
+    "item_generale" : "Captina provides quality consulting services in embedded systems area.<br>Starting from the software and its functionalities, <br>Captina not only help you find the best BSP that fit your requirements,<br>but can also help you in your hardware Design<br>Captina can also drive everything for you as your technical manager :",
+    "item_1" : "1.Specifications & Schedule:",
+    "item_1_1": "Captina help you identify your needs, and answer the need, not the question !",
+    "item_2": "2.Software requierements:",
+    "item_2_1": "provides support for 3rd party and partner boards;"
   },
   "skills": {
     "title": "Skills-en"

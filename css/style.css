@@ -295,6 +295,16 @@ h1, .h1 {
   height: 3em;
   vertical-align: top;
 }
+
+.item {
+    font-size: 21px;
+    font-weight: 700;
+    color: #8CA924
+}
+.under_item {
+    font-style: italic;
+}
+
 /********************************************/
 
 /******** CSS to background sections ********/
