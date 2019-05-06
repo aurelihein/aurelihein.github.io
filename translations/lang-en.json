@@ -1,23 +1,92 @@
 {
-  "coverage": {
-    "title": "Coverage",
-    "item_generale" : "Captina provides quality consulting services in embedded systems area.<br>Starting from the software and its functionalities, <br>Captina not only help you find the best BSP that fit your requirements,<br>but can also help you in your hardware Design<br>Captina can also drive everything for you as your technical manager :",
-    "item_1" : "1.Specifications & Schedule:",
-    "item_1_1": "Captina help you identify your needs, and answer the need, not the question !",
-    "item_2": "2.Software requierements:",
-    "item_2_1": "provides support for 3rd party and partner boards;"
+  "speciality_1": {
+    "title": "Electronics",
+    "item_generale" : "Schematics / PCB Components / PCB Design / Mechanical constraints",
+    "item_1" : "Power : ",
+    "item_1_1": "TI, OnSemi",
+    "item_2": "Microcontrollers, processors, boards :",
+    "item_2_1": "ST32, ARM (iMX), PowerPC, DSP, FPGA, Raspberry Pi, odroid-c2, odroid-n2",
+    "item_3": "Bus :",
+    "item_3_1": "DDRAM, RGMII, PCIe, SDCARD, NOR, NAND, USB, SSI, SPI, I2C, GPIO, UART, RTC, Relay, Codecs, TFT, TouchScreen, CMOS, WiFi,",
+    "item_4": "PCB Design Software :",
+    "item_4_1": "Orcad Cadence, KiCAD"
+  },
+  "speciality_2": {
+    "title": "Firmware",
+    "item_generale" : "Help you find the best embedded softwares that fit your requirements",
+    "item_1" : "Bootloader :",
+    "item_1_1": "U-Boot, Barebox",
+    "item_2": "OS & drivers :",
+    "item_2_1": "Linux, Android, uC",
+    "item_3": "BSP :",
+    "item_3_1": "LTIB, Buildroot, Yocto",
+    "item_4": "IDE :",
+    "item_4_1": "ST, Microchip, Eclipse",
+    "item_5": "Cloud-Compiling :",
+    "item_5_1": "Set-up a cloud system that can generate all your firmware for your devices automatically :  docker, jenkins, yocto",
+    "item_6": "Cloud OTA :",
+    "item_6_1": "Upgrade your devices thanks to the cloud : mender.io"
+  },
+  "speciality_3": {
+    "title": "Software",
+    "item_generale" : "High-level software devlopment",
+    "item_1" : "IoT :",
+    "item_1_1": "MQTT",
+    "item_2": "Display & Capture :",
+    "item_2_1": "Gstreamer, FFMPEG, zoneminder, motion, kodi",
+    "item_3": "VOIP / SIP :",
+    "item_3_1": "PJSIP, linphone, Asterisk, SIPP, ALSA, H264, VP8",
+    "item_4": "Android / iOS :",
+    "item_4_1": "Thanks to software designers, develop your mobile application",
+    "item_5": "WEB :",
+    "item_5_1": "WPE, webkit",
+    "item_6": "Environnement :",
+    "item_6_1": "Wayland, GTK",
+    "item_7": "Domotic :",
+    "item_7_1": "Domoticz",
+    "item_8": "Artificial Intelligence :",
+    "item_8_1": "TensorFlow,"
+  },
+  "speciality_4": {
+    "title": "Project Management",
+    "item_generale" : "Drive your team when multiples engineering needs to merge",
+    "item_1" : "Négociation des composants avec les distributeurs ",
+    "item_2": "Collaboration avec Designer mécanique produits",
+    "item_3": "Suivi de sous traitances de production de cartes",
+    "item_4": "Suivi de développement d'outillage : moule pour plasturgie, filière pour tôlerie"
+  },
+  "references_1": {
+    "title": "Clients",
+    "item_generale" : "Client are all differents but they all need the same : Expertise & Advises",
+    "item_1" : "3 kind of clients :",
+    "item_1_1": "Clients that do not know anything in Research & Development",
+    "item_1_2": "Clients that need the skill",
+    "item_1_3": "Clients that needs immediate help and reinforcements ",
+    "item_2": "Various domains :",
+    "item_2_1": "Smart building",
+    "item_2_2": "Health",
+    "item_2_3": "Cars",
+    "item_2_4": "Industrials",
+    "item_2_5": "Commercial/Marketing",
+    "item_2_6": "IoT",
+    "item_2_7": "Cloud",
+    "item_3": "Company size :",
+    "item_3_1": "Start-up",
+    "item_3_2": "Small",
+    "item_3_3": "Medium",
+    "item_3_4": "Big"
   },
   "skills": {
-    "title": "Skills-en"
+    "title": "Compétences"
   },
   "clients": {
-    "title": "Clients-en"
+    "title": "Clients"
   },
   "contact": {
-    "title": "Contact-en"
+    "title": "Contact"
   },
   "main": {
-    "author": "Developed by Aurélien BOUIN-aurelihein"
+    "author": "Développé par Aurélien BOUIN-aurelihein"
   },
   "test": {
     "title": "Skills",
