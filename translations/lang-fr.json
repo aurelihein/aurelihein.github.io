@@ -1,7 +1,7 @@
 {
   "speciality_1": {
     "title": "Électronique",
-    "item_generale" : "Élaboration de schéma / Choix des composants / Routage de cartes / Intégration mécatronique",
+    "item_generale" : "Élaboration de schémas / Choix des composants / Routage de cartes / Intégration mécatronique",
     "item_1" : "Alimentation : ",
     "item_1_1": "TI, OnSemi",
     "item_2": "Processeurs / Plateformes :",
@@ -23,7 +23,7 @@
     "item_4": "IDE :",
     "item_4_1": "ST, Microchip, Eclipse",
     "item_5": "Cloud-Compiling :",
-    "item_5_1": "Mise en place de système cloud de compilation et mise à jour à distance :  docker, jenkins, yocto",
+    "item_5_1": "Mise en place de cloud de compilation automatique :  docker, jenkins, yocto",
     "item_6": "Cloud OTA :",
     "item_6_1": "Mise à jour via le cloud : mender.io"
   },
@@ -74,7 +74,7 @@
     "item_3_1": "Start-up",
     "item_3_2": "PME",
     "item_3_3": "ETI",
-    "item_3_4": "Grande Entreprises"
+    "item_3_4": "Grandes Entreprises"
   },
   "skills": {
     "title": "Compétences"

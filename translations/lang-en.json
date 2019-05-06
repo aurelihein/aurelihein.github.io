@@ -23,13 +23,13 @@
     "item_4": "IDE :",
     "item_4_1": "ST, Microchip, Eclipse",
     "item_5": "Cloud-Compiling :",
-    "item_5_1": "Set-up a cloud system that can generate all your firmware for your devices automatically :  docker, jenkins, yocto",
+    "item_5_1": "Set-up a cloud system that can generate all your firmware automatically :  docker, jenkins, yocto",
     "item_6": "Cloud OTA :",
-    "item_6_1": "Upgrade your devices thanks to the cloud : mender.io"
+    "item_6_1": "Upgrade your devices inside the cloud : mender.io"
   },
   "speciality_3": {
     "title": "Software",
-    "item_generale" : "High-level software devlopment",
+    "item_generale" : "High-level software development",
     "item_1" : "IoT :",
     "item_1_1": "MQTT",
     "item_2": "Display & Capture :",
@@ -49,15 +49,15 @@
   },
   "speciality_4": {
     "title": "Project Management",
-    "item_generale" : "Drive your team when multiples engineering needs to merge",
-    "item_1" : "Négociation des composants avec les distributeurs ",
-    "item_2": "Collaboration avec Designer mécanique produits",
-    "item_3": "Suivi de sous traitances de production de cartes",
-    "item_4": "Suivi de développement d'outillage : moule pour plasturgie, filière pour tôlerie"
+    "item_generale" : "Drive your team when multiples engineers needs to merge",
+    "item_1" : "Help make the good choice for your technology",
+    "item_2": "Supervise your team from the designer to software engineer",
+    "item_3": "Selected teams of sub-contractors, supervised co-workers",
+    "item_4": "Monitor industrial process"
   },
   "references_1": {
     "title": "Clients",
-    "item_generale" : "Client are all differents but they all need the same : Expertise & Advises",
+    "item_generale" : "Clients are all differents but they all need the same : Expertise & Advises",
     "item_1" : "3 kind of clients :",
     "item_1_1": "Clients that do not know anything in Research & Development",
     "item_1_2": "Clients that need the skill",
