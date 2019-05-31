@@ -28,6 +28,24 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
     <title>Captina</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+    <script>
+    window.addEventListener("load", function(){
+    window.cookieconsent.initialise({
+      "palette": {
+        "popup": {
+          "background": "#efefef",
+          "text": "#404040"
+        },
+        "button": {
+          "background": "transparent",
+          "text": "#8ec760",
+          "border": "#8ec760"
+        }
+      }
+    })});
+    </script>
   </head>
   <!-- Think about a preloader -->
   <body>
