@@ -5,7 +5,7 @@
     "item_1" : "Alimentation : ",
     "item_1_1": "TI, OnSemi",
     "item_2": "Processeurs / Plateformes :",
-    "item_2_1": "ST32, ARM (iMX), PowerPC, DSP, FPGA, Raspberry Pi, odroid-c2, odroid-n2",
+    "item_2_1": "STM32, ARM (iMX), PowerPC, DSP, FPGA, Raspberry Pi, odroid-c2, odroid-n2",
     "item_3": "Bus d'interface :",
     "item_3_1": "DDRAM, RGMII, PCIe, SDCARD, NOR, NAND, USB, SSI, SPI, I2C, GPIO, UART, RTC, Relais, Codecs, TFT, TouchScreen, CMOS, WiFi, CSI, MiPi",
     "item_4": "Logiciel de routage :",
