@@ -7,7 +7,7 @@
     "item_2": "Microcontrollers, processors, boards :",
     "item_2_1": "STM32, ARM (iMX), PowerPC, DSP, FPGA, Raspberry Pi, odroid-c2, odroid-n2",
     "item_3": "Bus :",
-    "item_3_1": "DDRAM, RGMII, PCIe, SDCARD, NOR, NAND, USB, SSI, SPI, I2C, GPIO, UART, RTC, Relay, Codecs, TFT, TouchScreen, CMOS, WiFi, CSI, MiPi",
+    "item_3_1": "DDRAM, RGMII, PCIe, SDCARD, NOR, NAND, USB, SSI, SPI, I2C, GPIO, UART, CAN, RTC, Relay, Codecs, TFT, TouchScreen, CMOS, WiFi, CSI, MiPi",
     "item_4": "PCB Design Software :",
     "item_4_1": "Orcad Cadence, KiCAD"
   },
