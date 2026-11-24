@@ -1,464 +1,365 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-139369481-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-139369481-1');
-    </script>
-    <meta charset="utf-8">
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
-    <meta name="description" content="Captina" />
-    <link type="text/css" rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:300">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/perfect-scrollbar.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
-    <!-- https://fontawesome.com/start -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title data-i18n="meta.title">CAPTINA — Embedded systems &amp; IoT engineering, from board to cloud</title>
+  <meta name="description" data-i18n-attr="content:meta.desc" content="Embedded systems engineering: electronics, embedded Linux (Yocto), firmware, Android (AOSP) and cloud. 100% remote, fully equipped lab, based in France.">
+  <link rel="canonical" href="https://captina.dev/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://captina.dev/">
+  <meta property="og:title" content="CAPTINA — From board to cloud">
+  <meta property="og:description" content="Embedded systems engineering: electronics, embedded Linux, firmware, Android and cloud. 100% remote.">
+  <meta property="og:image" content="https://captina.dev/images/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="CAPTINA — From board to cloud">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="en" href="https://captina.dev/">
+  <link rel="alternate" hreflang="fr" href="https://captina.dev/?lang=fr">
+  <link rel="alternate" hreflang="x-default" href="https://captina.dev/">
+  <meta name="theme-color" content="#0f2e24">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"CAPTINA","url":"https://captina.dev/","logo":"https://captina.dev/images/captina_noir.png","image":"https://captina.dev/images/og.png","description":"Embedded systems and IoT engineering, from board to cloud: electronics, embedded Linux (Yocto), firmware, Android (AOSP), DevOps and cloud. 100% remote.","founder":{"@type":"Person","name":"Aurélien Bouin","jobTitle":"Embedded systems engineer","sameAs":["https://www.linkedin.com/in/aurelien-bouin","https://github.com/aurelihein"]},"address":{"@type":"PostalAddress","addressLocality":"Mazé-Milon","postalCode":"49630","addressCountry":"FR"},"areaServed":"Worldwide","vatID":"FR55851267229","identifier":"SIRET 851 267 229 00017","knowsAbout":["Embedded Linux","Yocto Project","AOSP","Firmware","STM32","ESP32","PCB design","KiCad","IoT","LTE-M","DevOps","Terraform","GitLab CI"],"sameAs":["https://www.linkedin.com/in/aurelien-bouin","https://github.com/aurelihein","https://www.upwork.com/freelancers/~013d21c92118887247"]}</script>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="fonts/chakra-petch-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="nav.skip">Skip to content</a>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-    <title>Captina</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
-    <script>
-    window.addEventListener("load", function(){
-    window.cookieconsent.initialise({
-      "palette": {
-        "popup": {
-          "background": "#efefef",
-          "text": "#404040"
-        },
-        "button": {
-          "background": "transparent",
-          "text": "#8ec760",
-          "border": "#8ec760"
-        }
-      }
-    })});
-    </script>
-  </head>
-  <!-- Think about a preloader -->
-  <body>
-
-    <header class="navbar navbar-fixed-top os-navbar" role="navigation">
-      <div class="container-fluid">
-
-        <div class="navbar-header os-main-links">
-          <button class="navbar-toggle collapsed" data-target=".navbar-collapse" data-toggle="collapse" type="button">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-        </div>
-
-        <div id="os-navbar-links" class="collapse navbar-collapse navbar-left">
-          <ul id="main-nav" class="nav navbar-nav os-main-links">
-            <li><a href="#">Home</a></li>
-            <li><a data-localize="speciality_1.title" href="#speciality_1">speciality_1</a></li>
-            <li><a data-localize="speciality_2.title" href="#speciality_2">speciality_2</a></li>
-            <li><a data-localize="speciality_3.title" href="#speciality_3">speciality_3</a></li>
-            <li><a data-localize="speciality_4.title" href="#speciality_4">speciality_4</a></li>
-            <li><a data-localize="references_1.title" href="#references_1">references_1</a></li>
-            <li><a data-localize="contact.title" href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <div id="os-navbar-links" class="collapse navbar-collapse navbar-right">
-          <ul id="main-nav" class="nav navbar-nav os-main-links languageSwitcher">
-                <li><a href="#" id="en" data-lang="en">English</a></li>
-                <li><a href="#" id="fr" data-lang="fr">Français</a></li>
-          </ul>
-            </div>
-        </div>
-
-<!--
-        <div id="os-navbar-links" class="language collapse navbar-collapse navbar-right">
-            <select id="languages" class="selectpicker">
-              <option value="en" data-content='<span class="flag-icon flag-icon-us"></span> English' >English</option>
-              <option value="fr" >Français</option>
-            </select>
-        </div>
--->
-
-      </div>
-    </header>
-<!--
-    <div class="language">
-    <p>Language: </p>
-      <select id="languages">
-        <option value="en" >English</option>
-        <option value="fr" >Français</option>
-      </select>
+  <header class="topbar">
+    <div class="wrap topbar-in">
+      <a class="brand" href="#top" aria-label="CAPTINA"><img src="images/captina_noir.png" alt="CAPTINA" width="154" height="28"></a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav" data-i18n-attr="aria-label:nav.menu" aria-label="Menu"><span></span><span></span></button>
+      <nav id="nav" class="nav">
+        <a href="#expertise" data-i18n="nav.expertise">Expertise</a>
+        <a href="#work" data-i18n="nav.work">Work</a>
+        <a href="#remote" data-i18n="nav.remote">Remote</a>
+        <a href="#references_1" data-i18n="nav.clients">Clients</a>
+        <a href="#contact" data-i18n="nav.contact">Contact</a>
+        <span class="lang" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button><button type="button" data-lang="fr" aria-pressed="false">FR</button>
+        </span>
+      </nav>
     </div>
--->
-    <div id="content">
-      <section id="header-section">
-        <div id="header-container" class="container">
-          <div id="overview">
-            <div id="logo">
-              <img src="images/captina_logo.png" alt="CAPTINA" >
-              <!--<h1 id="project_title">Captina</h1>-->
+  </header>
+
+  <div class="scroll-trace" aria-hidden="true"><i></i></div>
+  <svg class="page-trace" aria-hidden="true" focusable="false"></svg>
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="wrap hero-in">
+        <div class="hero-copy">
+          <p class="kicker" data-i18n="hero.kicker">Embedded systems &amp; IoT engineering</p>
+          <h1><span class="line" data-i18n="hero.l1">From board</span> <span class="line accent" data-i18n="hero.l2">to cloud.</span></h1>
+          <p class="sub" data-i18n="hero.sub">CAPTINA designs electronic boards, brings them up, builds the embedded Linux or firmware that runs on them, and operates the cloud they report to. One engineer, the whole chain — nothing lost between teams.</p>
+          <div class="cta">
+            <a class="btn btn-solid" href="#contact" data-i18n="hero.cta1">Discuss your project</a>
+            <a class="btn btn-ghost" href="#expertise" data-i18n="hero.cta2">See expertise</a>
+          </div>
+          <p class="hero-meta" data-i18n="hero.meta">Remote · Based in France · Working with teams worldwide</p>
+          <nav class="jump" aria-labelledby="jump-l"><span id="jump-l" data-i18n="hero.index">Jump to</span><a href="#expertise" data-jump="Yocto">Yocto</a><a href="#expertise" data-jump="AOSP">AOSP</a><a href="#expertise" data-jump="Linux kernel">Linux kernel</a><a href="#expertise" data-jump="STM32">STM32</a><a href="#expertise" data-jump="ESP32">ESP32</a><a href="#expertise" data-jump="i.MX">i.MX</a><a href="#expertise" data-jump="KiCad">KiCad</a><a href="#expertise" data-jump="LTE-M">LTE-M</a><a href="#expertise" data-jump="Terraform">Terraform</a><a href="#expertise" data-jump="DevOps">DevOps</a><a href="#expertise" data-jump="Go">Go</a></nav>
+        </div>
+        <div class="hero-art">
+      <svg class="board" viewBox="0 0 600 420" aria-hidden="true" focusable="false">
+        <defs><radialGradient id="glow"><stop offset="0" stop-color="#3dff7a" stop-opacity=".9"/><stop offset="1" stop-color="#3dff7a" stop-opacity="0"/></radialGradient></defs>
+        <g class="traces"><path class="tr" style="--d:0.00s" d="M251 130L251 122L226.5 97.5L226.5 -280"/><path class="tr" style="--d:0.04s" d="M265 130L265 113.6L247.5 96.1L247.5 -280"/><path class="tr" style="--d:0.07s" d="M279 130L279 105.2L268.5 94.7L268.5 -280"/><path class="tr" style="--d:0.11s" d="M293 130L293 96.8L289.5 93.3L289.5 -280"/><path class="tr" style="--d:0.14s" d="M307 130L307 96.8L310.5 93.3L310.5 -280"/><path class="tr" style="--d:0.18s" d="M321 130L321 105.2L331.5 94.7L331.5 -280"/><path class="tr" style="--d:0.21s" d="M335 130L335 113.6L352.5 96.1L352.5 -280"/><path class="tr" style="--d:0.25s" d="M349 130L349 122L373.5 97.5L373.5 -280"/><path class="tr" style="--d:0.28s" d="M380 161L388 161L412.5 136.5L790 136.5"/><path class="tr" style="--d:0.32s" d="M380 175L396.4 175L413.9 157.5L790 157.5"/><path class="tr" style="--d:0.35s" d="M380 189L404.8 189L415.3 178.5L790 178.5"/><path class="tr" style="--d:0.39s" d="M380 231L404.8 231L415.3 241.5L790 241.5"/><path class="tr" style="--d:0.42s" d="M380 245L396.4 245L413.9 262.5L790 262.5"/><path class="tr" style="--d:0.46s" d="M380 259L388 259L412.5 283.5L440 283.5L466.5 310L466.5 346L478 346"/><path class="tr" style="--d:0.49s" d="M349 290L349 298L373.5 322.5L373.5 700"/><path class="tr" style="--d:0.53s" d="M335 290L335 306.4L352.5 323.9L352.5 700"/><path class="tr" style="--d:0.56s" d="M321 290L321 314.8L331.5 325.3L331.5 700"/><path class="tr" style="--d:0.60s" d="M307 290L307 323.2L310.5 326.7L310.5 700"/><path class="tr" style="--d:0.63s" d="M293 290L293 323.2L289.5 326.7L289.5 700"/><path class="tr" style="--d:0.67s" d="M279 290L279 314.8L268.5 325.3L268.5 700"/><path class="tr" style="--d:0.70s" d="M265 290L265 306.4L247.5 323.9L247.5 700"/><path class="tr" style="--d:0.74s" d="M251 290L251 298L226.5 322.5L226.5 700"/><path class="tr" style="--d:0.77s" d="M220 259L212 259L187.5 283.5L-190 283.5"/><path class="tr" style="--d:0.81s" d="M220 245L203.6 245L186.1 262.5L-190 262.5"/><path class="tr" style="--d:0.84s" d="M220 231L195.2 231L184.7 241.5L-190 241.5"/><path class="tr" style="--d:0.88s" d="M220 217L186.8 217L183.3 220.5L-190 220.5"/><path class="tr" style="--d:0.91s" d="M220 203L186.8 203L183.3 199.5L-190 199.5"/><path class="tr" style="--d:0.95s" d="M220 189L195.2 189L184.7 178.5L-190 178.5"/><path class="tr" style="--d:0.98s" d="M220 175L203.6 175L186.1 157.5L-190 157.5"/><path class="tr" style="--d:1.02s" d="M220 161L212 161L187.5 136.5L-190 136.5"/></g>
+        <g class="traces pair"><path class="tr" style="--d:.3s" d="M380 203L386 203L389.5 206.5L435.5 206.5L449.5 220.5L790 220.5"/><path class="tr" style="--d:.3s" d="M380 217L386 217L389.5 213.5L435.5 213.5L449.5 227.5L790 227.5"/></g>
+        <g class="pulses"><path class="pulse" style="--p:0s" d="M380 203L386 203L389.5 206.5L435.5 206.5L449.5 220.5L790 220.5"/><path class="pulse" style="--p:0s" d="M380 217L386 217L389.5 213.5L435.5 213.5L449.5 227.5L790 227.5"/><path class="pulse hb-pulse" style="--p:0s" d="M380 259L388 259L412.5 283.5L440 283.5L466.5 310L466.5 346L478 346"/></g>
+        <g class="vias"><circle class="via" style="--d:0.00s" cx="226.5" cy="97.5" r="3.6"/><circle class="via" style="--d:0.07s" cx="268.5" cy="94.7" r="3.6"/><circle class="via" style="--d:0.14s" cx="310.5" cy="93.3" r="3.6"/><circle class="via" style="--d:0.21s" cx="352.5" cy="96.1" r="3.6"/><circle class="via" style="--d:0.28s" cx="412.5" cy="136.5" r="3.6"/><circle class="via" style="--d:0.35s" cx="415.3" cy="178.5" r="3.6"/><circle class="via" style="--d:0.42s" cx="413.9" cy="262.5" r="3.6"/><circle class="via" style="--d:0.49s" cx="373.5" cy="322.5" r="3.6"/><circle class="via" style="--d:0.56s" cx="331.5" cy="325.3" r="3.6"/><circle class="via" style="--d:0.63s" cx="289.5" cy="326.7" r="3.6"/><circle class="via" style="--d:0.70s" cx="247.5" cy="323.9" r="3.6"/><circle class="via" style="--d:0.77s" cx="187.5" cy="283.5" r="3.6"/><circle class="via" style="--d:0.84s" cx="184.7" cy="241.5" r="3.6"/><circle class="via" style="--d:0.91s" cx="183.3" cy="199.5" r="3.6"/><circle class="via" style="--d:0.98s" cx="186.1" cy="157.5" r="3.6"/></g>
+        <g class="pins"><line x1="251" y1="140" x2="251" y2="130"/><line x1="265" y1="140" x2="265" y2="130"/><line x1="279" y1="140" x2="279" y2="130"/><line x1="293" y1="140" x2="293" y2="130"/><line x1="307" y1="140" x2="307" y2="130"/><line x1="321" y1="140" x2="321" y2="130"/><line x1="335" y1="140" x2="335" y2="130"/><line x1="349" y1="140" x2="349" y2="130"/><line x1="370" y1="161" x2="380" y2="161"/><line x1="370" y1="175" x2="380" y2="175"/><line x1="370" y1="189" x2="380" y2="189"/><line x1="370" y1="203" x2="380" y2="203"/><line x1="370" y1="217" x2="380" y2="217"/><line x1="370" y1="231" x2="380" y2="231"/><line x1="370" y1="245" x2="380" y2="245"/><line x1="370" y1="259" x2="380" y2="259"/><line x1="349" y1="280" x2="349" y2="290"/><line x1="335" y1="280" x2="335" y2="290"/><line x1="321" y1="280" x2="321" y2="290"/><line x1="307" y1="280" x2="307" y2="290"/><line x1="293" y1="280" x2="293" y2="290"/><line x1="279" y1="280" x2="279" y2="290"/><line x1="265" y1="280" x2="265" y2="290"/><line x1="251" y1="280" x2="251" y2="290"/><line x1="230" y1="259" x2="220" y2="259"/><line x1="230" y1="245" x2="220" y2="245"/><line x1="230" y1="231" x2="220" y2="231"/><line x1="230" y1="217" x2="220" y2="217"/><line x1="230" y1="203" x2="220" y2="203"/><line x1="230" y1="189" x2="220" y2="189"/><line x1="230" y1="175" x2="220" y2="175"/><line x1="230" y1="161" x2="220" y2="161"/></g>
+        <g class="hb">
+          <path class="tr" style="--d:1.2s" d="M478 356L466.5 367.5"/>
+          <path class="tr" style="--d:1.2s" d="M512 351L520 351L520 342"/>
+          <path class="tr" style="--d:1.3s" d="M520 324L520 318L534 318"/>
+          <path class="tr" style="--d:1.3s" d="M550 318L562 318"/>
+          <circle class="via" style="--d:1.2s" cx="466.5" cy="370" r="3.6"/>
+          <circle class="via" style="--d:1.3s" cx="565" cy="318" r="3.6"/>
+          <rect class="pad" x="476" y="343.5" width="6" height="5"/><rect class="pad" x="476" y="353.5" width="6" height="5"/><rect class="pad" x="506" y="348.5" width="6" height="5"/>
+          <rect class="body" x="481" y="342" width="26" height="18" rx="1.5"/>
+          <rect class="pad" x="515.5" y="338" width="9" height="6"/><rect class="pad" x="515.5" y="322" width="9" height="6"/>
+          <rect class="body" x="516.5" y="327" width="7" height="12"/>
+          <rect class="pad" x="532" y="314" width="6" height="8"/><rect class="pad" x="546" y="314" width="6" height="8"/>
+          <circle class="led-glow" cx="542" cy="318" r="26"/>
+          <rect class="led" x="533" y="313" width="18" height="10" rx="1.5"/>
+          <text class="silk" x="494" y="371" text-anchor="middle">Q1</text>
+          <text class="silk" x="529" y="336">R1</text>
+          <text class="silk" x="542" y="307" text-anchor="middle">D1</text>
+          <text class="silk" x="466.5" y="387" text-anchor="middle">GND</text>
+          <text class="silk" x="565" y="333" text-anchor="middle">3V3</text>
+        </g>
+        <text class="pair-lbl" x="428" y="200">USB D+/D− · 90 Ω</text>
+        <rect class="chip" x="230" y="140" width="140" height="140" rx="4"/>
+        <circle class="pin1" cx="244" cy="154" r="4"/>
+        <text class="chip-txt" x="300" y="206" text-anchor="middle">CAPTINA</text>
+        <text class="chip-sub" x="300" y="226" text-anchor="middle">U1 · REV 2026</text>
+      </svg>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="expertise" aria-labelledby="expertise-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">[ 01 ]</p>
+          <h2 id="expertise-h" data-i18n="exp.title">Expertise</h2>
+          <p class="section-lead" data-i18n="exp.lead">Five disciplines that usually take five contractors.</p>
+          <p class="section-lead vision" data-i18n="exp.vision">Working on every layer means I see how a choice on the board shows up in the firmware, the update system and the cloud bill — and I make it once, for the whole system.</p>
+        </div>
+      <article class="spec reveal" id="speciality_1">
+        <header class="spec-head">
+          <span class="spec-num" aria-hidden="true">01</span>
+          <h3 data-i18n="e1.title">Electronics &amp; bring-up</h3>
+          <p class="hook" data-i18n="e1.hook">Your board powers on the first time. Or I find out why.</p>
+        </header>
+        <div class="spec-body">
+          <p class="lead" data-i18n="e1.lead">Schematics, component selection, PCB layout and first power-on of complex boards, with mechanical integration in mind.</p>
+          <dl class="pins">
+            <div><dt data-i18n="e1.r1">Design</dt><dd><ul class="tags" data-stagger><li>KiCad</li><li data-i18n="e1.t1">Low-power design</li><li data-i18n="e1.t2">Battery &amp; solar supply</li></ul></dd></div>
+            <div><dt data-i18n="e1.r2">Processors</dt><dd><ul class="tags" data-stagger><li>STM32</li><li>nRF52</li><li>Espressif ESP32-S3</li><li>NXP i.MX 6/7/8/9</li><li>Raspberry Pi</li><li>Qualcomm</li><li>ATmega</li></ul></dd></div>
+            <div><dt data-i18n="e1.r3">Power</dt><dd><ul class="tags" data-stagger><li>TI</li><li>onsemi</li><li>PF100</li><li>BD71847</li><li>PCA9450</li></ul></dd></div>
+            <div><dt data-i18n="e1.r4">Interfaces</dt><dd><ul class="tags" data-stagger><li>DDR</li><li>PCIe</li><li>RGMII</li><li>USB</li><li>SD</li><li>NOR</li><li>NAND</li><li>SPI</li><li>I²C</li><li>UART</li><li>CAN</li><li>GPIO</li><li>MIPI CSI</li><li>TFT</li><li data-i18n="e1.t3">Touchscreen</li><li>Wi-Fi</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="spec reveal" id="speciality_2">
+        <header class="spec-head">
+          <span class="spec-num" aria-hidden="true">02</span>
+          <h3 data-i18n="e2.title">Embedded Linux</h3>
+          <p class="hook" data-i18n="e2.hook">A distribution you can ship, update and still maintain in five years.</p>
+        </header>
+        <div class="spec-body">
+          <p class="lead" data-i18n="e2.lead">Production-grade distributions, from board support package to over-the-air updates.</p>
+          <dl class="pins">
+            <div><dt data-i18n="e2.r1">Build systems</dt><dd><ul class="tags" data-stagger><li>Yocto / BitBake</li><li>OpenEmbedded</li><li>kas</li><li>Buildroot</li><li>ptxdist</li></ul></dd></div>
+            <div><dt data-i18n="e2.r2">Boot &amp; kernel</dt><dd><ul class="tags" data-stagger><li>U-Boot</li><li>Barebox</li><li>UEFI / EDK2</li><li data-i18n="e2.t1">Linux kernel</li><li data-i18n="e2.t2">Device drivers</li></ul></dd></div>
+            <div><dt data-i18n="e2.r3">Updates</dt><dd><ul class="tags" data-stagger><li>swupdate (A/B)</li><li>Mender</li></ul></dd></div>
+            <div><dt data-i18n="e2.r4">System</dt><dd><ul class="tags" data-stagger><li>systemd</li><li>btrfs</li><li>x86-64</li><li>ARM64</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="spec reveal" id="speciality_3">
+        <header class="spec-head">
+          <span class="spec-num" aria-hidden="true">03</span>
+          <h3 data-i18n="e3.title">Firmware &amp; connectivity</h3>
+          <p class="hook" data-i18n="e3.hook">Firmware that survives the field, not just the bench.</p>
+        </header>
+        <div class="spec-body">
+          <p class="lead" data-i18n="e3.lead">Microcontroller firmware for connected, battery-powered devices: low-power sleep cycles, reliable OTA, fleet-wide validation.</p>
+          <dl class="pins">
+            <div><dt data-i18n="e3.r1">Languages &amp; tools</dt><dd><ul class="tags" data-stagger><li>C</li><li>C++</li><li>PlatformIO</li><li>ESP-IDF</li><li>Arduino</li><li>OpenOCD</li></ul></dd></div>
+            <div><dt data-i18n="e3.r2">Wireless</dt><dd><ul class="tags" data-stagger><li>LTE-M</li><li>NB-IoT</li><li>4G</li><li>LoRaWAN</li><li>Sigfox</li><li>BLE</li><li>Wi-Fi</li><li>Zigbee</li></ul></dd></div>
+            <div><dt data-i18n="e3.r3">Field buses</dt><dd><ul class="tags" data-stagger><li>RS485</li><li>Modbus RTU</li><li>4-20 mA</li><li>BACnet</li><li>DNP3</li></ul></dd></div>
+            <div><dt data-i18n="e3.r4">Reliability</dt><dd><ul class="tags" data-stagger><li>OTA</li><li>Watchdog</li><li>NVS / EEPROM</li><li data-i18n="e3.t1">RTC wake-up</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="spec reveal" id="speciality_4">
+        <header class="spec-head">
+          <span class="spec-num" aria-hidden="true">04</span>
+          <h3 data-i18n="e4.title">DevOps &amp; cloud</h3>
+          <p class="hook" data-i18n="e4.hook">Firmware that ships like software: built, tested and released by the pipeline, not by hand.</p>
+        </header>
+        <div class="spec-body">
+          <p class="lead" data-i18n="e4.lead">Embedded DevOps: CI pipelines, build farms and release tooling for firmware and Linux images. Plus the backend, web apps and infrastructure your fleet reports to.</p>
+          <dl class="pins">
+            <div><dt data-i18n="e4.r0">Practices</dt><dd><ul class="tags" data-stagger><li data-i18n="e4.t1">Reproducible builds</li><li data-i18n="e4.t2">Shared build caches (sstate)</li><li data-i18n="e4.t3">Release management (RC / GA / hotfix)</li><li data-i18n="e4.t4">CVE tracking</li><li data-i18n="e4.t5">Staged OTA rollouts</li><li data-i18n="e4.t6">Image validation in VMs</li><li data-i18n="e4.t7">Build cost optimization (cloud → on-prem vSphere)</li></ul></dd></div>
+            <div><dt data-i18n="e4.r1">CI / CD</dt><dd><ul class="tags" data-stagger><li>GitLab CI</li><li>Jenkins</li><li>Concourse</li></ul></dd></div>
+            <div><dt data-i18n="e4.r2">Infrastructure</dt><dd><ul class="tags" data-stagger><li>Terraform</li><li>Packer</li><li>Docker</li><li>vSphere</li><li>OVHcloud</li><li>OpenStack</li><li>AWS</li><li>Google Cloud</li><li>nginx</li><li>Ansible</li></ul></dd></div>
+            <div><dt data-i18n="e4.r3">Backend &amp; web</dt><dd><ul class="tags" data-stagger><li>Python</li><li>Go</li><li>Flask</li><li>SQLAlchemy</li><li>PostgreSQL</li><li>TypeScript</li><li>React</li><li>WebSocket</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+      <article class="spec reveal" id="speciality_5">
+        <header class="spec-head">
+          <span class="spec-num" aria-hidden="true">05</span>
+          <h3 data-i18n="e5.title">Android &amp; multimedia</h3>
+          <p class="hook" data-i18n="e5.hook">From the device tree to the app icon.</p>
+        </header>
+        <div class="spec-body">
+          <p class="lead" data-i18n="e5.lead">Android platform bring-up on custom hardware, native apps and video pipelines.</p>
+          <dl class="pins">
+            <div><dt data-i18n="e5.r1">AOSP platform</dt><dd><ul class="tags" data-stagger><li>HAL</li><li>SELinux</li><li>Device tree</li><li data-i18n="e5.t1">Boot time</li><li data-i18n="e5.t2">Charger mode</li></ul></dd></div>
+            <div><dt data-i18n="e5.r2">Apps</dt><dd><ul class="tags" data-stagger><li>Kotlin</li><li>Jetpack Compose</li><li>CameraX</li><li>Capacitor</li></ul></dd></div>
+            <div><dt data-i18n="e5.r3">Video</dt><dd><ul class="tags" data-stagger><li>GStreamer</li><li>FFmpeg</li><li>H.264 / H.265</li><li>OmniVision</li><li>Wayland / Weston</li><li>GTK</li></ul></dd></div>
+            <div><dt data-i18n="e5.r4">VoIP &amp; audio</dt><dd><ul class="tags" data-stagger><li>PJSIP</li><li>Linphone</li><li>Asterisk</li><li>SIPp</li><li>ALSA</li></ul></dd></div>
+          </dl>
+        </div>
+      </article>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="work" aria-labelledby="work-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">[ 02 ]</p>
+          <h2 id="work-h" data-i18n="work.title">Selected work</h2>
+          <p class="section-lead" data-i18n="work.lead">Shipped, in the field, still running.</p>
+        </div>
+        <div class="cases" data-stagger>
+        <article class="case">
+          <p class="case-label" data-i18n="w1.label">Squama · In production</p>
+          <h3 data-i18n="w1.title">IoT monitoring platform for measurement stations</h3>
+          <p class="case-desc" data-i18n="w1.desc">Designed and operated end to end, from the sensor in the field to the phone in the operator’s pocket.</p>
+          <ul class="ticks">
+            <li data-i18n="w1.i1">STM32 sensor firmware and 4-20 mA acquisition board</li>
+            <li data-i18n="w1.i2">ESP32-S3 cellular transmitter (LTE-M / NB-IoT) with robust OTA and fleet validation campaigns</li>
+            <li data-i18n="w1.i3">Flask / PostgreSQL backend, real-time React web app and its Android version built with Capacitor</li>
+            <li data-i18n="w1.i4">Terraform infrastructure, migrated from Google Cloud to OVHcloud</li>
+          </ul>
+        </article>
+        <article class="case">
+          <p class="case-label" data-i18n="w2.label">Confidential · NDA</p>
+          <h3 data-i18n="w2.title">Handheld GPS device — Android 9 on i.MX7D</h3>
+          <p class="case-desc" data-i18n="w2.desc">Took a freshly booted board to a shippable Android product.</p>
+          <ul class="ticks">
+            <li data-i18n="w2.i1">Sensor drivers and Android HALs, including a barometer HAL written from scratch</li>
+            <li data-i18n="w2.i2">SELinux moved from permissive to enforcing</li>
+            <li data-i18n="w2.i3">Boot time optimization, charger mode and boot reasons</li>
+            <li data-i18n="w2.i4">USB mass storage and Wi-Fi fixes</li>
+          </ul>
+        </article>
+        <article class="case">
+          <p class="case-label" data-i18n="w3.label">Consulting · since 2019</p>
+          <h3 data-i18n="w3.title">Board bring-up &amp; custom Linux</h3>
+          <p class="case-desc" data-i18n="w3.desc">For teams that needed a specialist, fast.</p>
+          <ul class="ticks">
+            <li data-i18n="w3.i1">Complex ARM boards: DDR, PCIe, power sequencing</li>
+            <li data-i18n="w3.i2">Linux drivers for cameras, displays and sensors</li>
+            <li data-i18n="w3.i3">VoIP / SIP products (PJSIP, Asterisk, ALSA)</li>
+            <li data-i18n="w3.i5">Custom AOSP and OpenWrt builds</li>
+            <li data-i18n="w3.i4">Cloud build farms and OTA pipelines</li>
+          </ul>
+        </article>
+        </div>
+        <div class="reviews">
+          <div class="reviews-head reveal">
+            <h3 data-i18n="r.title">What clients say</h3>
+            <p data-i18n="r.note">Verified reviews from Upwork clients, quoted as written.</p>
+          </div>
+          <div class="quotes" data-stagger>
+            <figure class="quote"><blockquote lang="en">Aurelien was fantastic at AOSP development and went above and beyond with this project. I would highly recommend Aurelien to anyone needing this work done!</blockquote><figcaption data-i18n="r.l1">Upwork client · AOSP device BSP, multi-year engagement</figcaption></figure>
+            <figure class="quote"><blockquote lang="en">Really good with AOSP and all related tasks. Built the project over the weekend for us.</blockquote><figcaption data-i18n="r.l2">Upwork client · AOSP build & APK adaptation</figcaption></figure>
+            <figure class="quote"><blockquote lang="en">Great job and completed on a fast timeline.</blockquote><figcaption data-i18n="r.l3">Upwork Enterprise client · Camera solution on 64-bit Ubuntu</figcaption></figure>
+          </div>
+          <a class="btn btn-ghost" href="https://www.upwork.com/freelancers/~013d21c92118887247" rel="noopener" target="_blank"><span data-i18n="r.all">See all reviews on Upwork</span> <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-dark" id="remote" aria-labelledby="remote-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">[ 03 ]</p>
+          <h2 id="remote-h" data-i18n="remote.title">Working together</h2>
+        </div>
+        <div class="remote-grid">
+          <div class="reveal">
+            <p class="statement" data-i18n="remote.big">Ship me the hardware. My lab does the rest.</p>
+            <p data-i18n="remote.p">100% remote, by design. Everything a bring-up needs is on my bench, so your boards get debugged here, not over a video call.</p>
+            <div class="bom">
+              <p class="bom-title" data-i18n="bench.title">Bill of materials — bench</p>
+              <ul data-stagger>
+              <li><span class="ref">TP1</span><span data-i18n="bench.b1">Oscilloscope</span></li>
+              <li><span class="ref">U2</span><span data-i18n="bench.b2">Logic analyzer</span></li>
+              <li><span class="ref">PS3</span><span data-i18n="bench.b3">Lab power supplies</span></li>
+              <li><span class="ref">J4</span><span data-i18n="bench.b4">JTAG / SWD probes</span></li>
+              <li><span class="ref">RW5</span><span data-i18n="bench.b5">SMD rework station</span></li>
+              <li><span class="ref">HA6</span><span data-i18n="bench.b6">Hot-air station</span></li>
+              <li><span class="ref">M7</span><span data-i18n="bench.b7">Microscope</span></li>
+              <li><span class="ref">L8</span><span data-i18n="bench.b8">Magnifiers</span></li>
+              <li><span class="ref">C9</span><span data-i18n="bench.b9">Component stock, ready to use</span></li>
+              </ul>
             </div>
           </div>
+          <div class="tz reveal">
+            <h3 data-i18n="tz.title">Your night, my day.</h3>
+            <p class="tz-hook" data-i18n="tz.p">Hand off at the end of your day; I work while you sleep. Fixes and features are waiting in your morning.</p>
+            <div class="tz-chart" role="img" data-i18n-attr="aria-label:tz.aria" aria-label="Working hours: France 8:00 to 17:00 UTC, US East Coast 14:00 to 23:00 UTC, US West Coast 17:00 to 2:00 UTC. France and the East Coast overlap from 14:00 to 17:00 UTC.">
+              <div class="tz-row"><span class="tz-name" data-i18n="tz.fr">France</span><span class="tz-track"><i class="tz-bar me" style="--a:8;--b:17"></i></span></div>
+              <div class="tz-row"><span class="tz-name" data-i18n="tz.et">New York · Montréal</span><span class="tz-track"><i class="tz-bar" style="--a:14;--b:23"></i><i class="tz-ov" style="--a:14;--b:17"></i></span></div>
+              <div class="tz-row"><span class="tz-name" data-i18n="tz.pt">San Francisco · Vancouver</span><span class="tz-track"><i class="tz-bar" style="--a:17;--b:24"></i><i class="tz-bar" style="--a:0;--b:2"></i></span></div>
+              <div class="tz-scale" aria-hidden="true"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div>
+              <p class="tz-caption" data-i18n="tz.caption">Working hours, UTC (winter time). Highlighted: shared window for calls.</p>
+            </div>
+            <p data-i18n="tz.overlap">French afternoon is East Coast morning: a real-time window for calls, the rest of the day for uninterrupted work.</p>
+          </div>
         </div>
-      </section>
-
-      <div class="os-back-top os-main-links">
-        <a href="#"><i class="fa fa-chevron-up fa-2x"></i></a>
       </div>
+    </section>
+
+    <section class="section" id="method" aria-labelledby="method-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">[ 04 ]</p>
+          <h2 id="method-h" data-i18n="m.title">How I work</h2>
+          <p class="section-lead" data-i18n="m.lead">Root cause, not workaround. Validated on real hardware, not on hope.</p>
+        </div>
+        <div class="principles" data-stagger>
+          <div class="principle"><h3 data-i18n="m.p1">Root-cause analysis</h3><p data-i18n="m.d1">Every incident is traced to its cause, then fixed where it starts.</p></div>
+          <div class="principle"><h3 data-i18n="m.p2">Real hardware</h3><p data-i18n="m.d2">Nothing is called done before it runs on the target.</p></div>
+          <div class="principle"><h3 data-i18n="m.p3">Traceable changes</h3><p data-i18n="m.d3">Clean history, written changelog, no dead code left behind.</p></div>
+          <div class="principle"><h3 data-i18n="m.p4">Suppliers &amp; subcontractors</h3><p data-i18n="m.d4">Component sourcing, PCB assembly, molds and sheet-metal tooling follow-up.</p></div>
+          <div class="principle"><h3 data-i18n="m.p5">Clear communication</h3><p data-i18n="m.d5">Complex problems explained simply; progress reported before you ask.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="references_1" aria-labelledby="clients-h">
+      <div class="wrap">
+        <div class="section-head reveal">
+          <p class="kicker">[ 05 ]</p>
+          <h2 id="clients-h" data-i18n="c.title">Who I work with</h2>
+          <p class="section-lead" data-i18n="c.lead">Different companies, one shared need: expertise, advice and an engineer who covers every layer.</p>
+        </div>
+        <div class="clients" data-stagger>
+          <div class="client-col"><h3 data-i18n="c.h1">How I help</h3><ul><li data-i18n="c.1.1">Your whole product, when you have no R&amp;D team</li><li data-i18n="c.1.2">The specialist your team is missing</li><li data-i18n="c.1.3">Extra capacity to hit a deadline</li></ul></div>
+          <div class="client-col"><h3 data-i18n="c.h2">Industries</h3><ul><li data-i18n="c.2.1">Smart building</li><li data-i18n="c.2.2">Healthcare</li><li data-i18n="c.2.3">Automotive</li><li data-i18n="c.2.4">Industrial</li><li data-i18n="c.2.5">Environmental monitoring</li><li data-i18n="c.2.6">IoT</li></ul></div>
+          <div class="client-col"><h3 data-i18n="c.h3">Company size</h3><ul><li data-i18n="c.3.1">Startups</li><li data-i18n="c.3.2">SMBs</li><li data-i18n="c.3.3">Mid-market</li><li data-i18n="c.3.4">Enterprise</li></ul></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contact-h">
+      <div class="wrap contact-in reveal">
+        <p class="kicker">[ 06 ] <span data-i18n="contact.kicker">Contact</span></p>
+        <h2 id="contact-h" data-i18n="contact.title">Tell me about your board, your product or your fleet.</h2>
+        <p data-i18n="contact.p">A few lines are enough to start. I answer in English or French.</p>
+        <div class="contact-links">
+          <a class="btn btn-solid mail" data-u="aurelien.bouin" data-d="captina.dev" href="#contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M3.5 6l8.5 7 8.5-7" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><span data-i18n="contact.cta">Email me</span></a>
+          <a class="btn btn-ghost" href="https://www.linkedin.com/in/aurelien-bouin" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zM9.5 9.75h3.8v1.5h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.45h-4v-4.83c0-1.15-.02-2.63-1.6-2.63-1.6 0-1.85 1.25-1.85 2.55v4.91h-4z"/></svg>LinkedIn</a>
+          <a class="btn btn-ghost" href="https://www.upwork.com/freelancers/~013d21c92118887247" rel="noopener" target="_blank">Upwork <span aria-hidden="true">↗</span></a>
+          <a class="btn btn-ghost" href="https://github.com/aurelihein" rel="noopener" target="_blank"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.39-5.25 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"/></svg>GitHub</a>
+        </div>
+        <p class="mail-plain"><span class="mail-addr" data-u="aurelien.bouin" data-d="captina.dev">aurelien.bouin [at] captina.dev</span></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-top">
+        <img src="images/captina_blanc.png" alt="CAPTINA" width="110" height="20" loading="lazy">
+        <p>&copy; CAPTINA SARL &middot; SIRET 851 267 229 00017 &middot; <span data-i18n="foot.nocookie">No cookies. No tracking.</span></p>
+      </div>
+      <details class="legal" id="legal">
+        <summary data-i18n="legal.title">Legal notice</summary>
+        <dl>
+          <div><dt data-i18n="legal.pub">Publisher</dt><dd><span data-i18n="legal.pubv">CAPTINA, single-member SARL (French limited liability company) with a share capital of €1,500</span></dd></div>
+          <div><dt data-i18n="legal.office">Registered office</dt><dd>11T Route de Fayet, Mazé, 49630 Mazé-Milon, France</dd></div>
+          <div><dt data-i18n="legal.reg">Registration</dt><dd>RCS Angers 851 267 229 &middot; SIRET 851 267 229 00017</dd></div>
+          <div><dt data-i18n="legal.vat">VAT number</dt><dd>FR55851267229</dd></div>
+          <div><dt data-i18n="legal.dir">Publication director</dt><dd><span data-i18n="legal.dirv">Aurélien BOUIN, managing director</span></dd></div>
+          <div><dt data-i18n="legal.contact">Contact</dt><dd><span class="mail-addr" data-u="aurelien.bouin" data-d="captina.dev">aurelien.bouin [at] captina.dev</span></dd></div>
+          <div><dt data-i18n="legal.host">Hosting</dt><dd><span data-i18n="legal.hostv">GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA</span></dd></div>
+          <div><dt data-i18n="legal.priv">Privacy</dt><dd><span data-i18n="legal.privv">This site sets no cookies, uses no analytics and loads nothing from third parties. Your language choice is kept only in your browser’s local storage. The host may keep technical logs (IP address) for security purposes.</span></dd></div>
+        </dl>
+      </details>
     </div>
+  </footer>
 
-
-      <section id="main-section">
-        <div id="main-content" class="container">
-          <div id="items" class="row">
-            <div class="col-sm-4">
-              <div class="os-centered os-main-links">
-                <a class="btn" href="#speciality_1">
-                  <span class="fa-stack fa-3x os-green-color">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-microchip fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <h4 data-localize="speciality_1.title" >Coverage</h4>
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="os-centered os-main-links">
-                <a class="btn" href="#speciality_2">
-                  <span class="fa-stack fa-3x os-violet-color">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-sim-card fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <h4 data-localize="speciality_2.title" >Skills</h4>
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="os-centered os-main-links">
-                <a class="btn" href="#speciality_3">
-                  <span class="fa-stack fa-3x os-red-color">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-mobile-alt fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <h4 data-localize="speciality_3.title" >Clients</h4>
-                </a>
-              </div>
-            </div>
-          </div>
-          <div id="items" class="row">
-            <div class="col-sm-4">
-              <div class="os-centered os-main-links">
-                <a class="btn" href="#speciality_4">
-                  <span class="fa-stack fa-3x os-grey-color">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-file-signature fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <h4 data-localize="speciality_4.title" >Contact</h4>
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="os-centered os-main-links">
-                <a class="btn" href="#references_1">
-                  <span class="fa-stack fa-3x os-blue-color">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-hands-helping fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <h4 data-localize="references_1.title" >Contact</h4>
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-4">
-              <div class="os-centered os-main-links">
-                <a class="btn" href="#contact">
-                  <span class="fa-stack fa-3x os-bluepastel-color">
-                    <i class="fa fa-circle fa-stack-2x"></i>
-                    <i class="fa fa-file-signature fa-stack-1x fa-inverse"></i>
-                  </span>
-                  <h4 data-localize="contact.title" >Contact</h4>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="speciality_1" class="os-no-striped os-section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="os-section-title">
-                <h1 data-localize="speciality_1.title" >speciality_1</h1>
-              </div>
-            </div>
-            <div class="col-md-8 os-border-left os-green-links">
-              <div class="os-section-content">
-                <p class="lead" data-localize="speciality_1.item_generale" >speciality_1 explanation</p>
-                <ul>
-                  <li>
-                    <span class="item" data-localize="speciality_1.item_1"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_1.item_1_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_1.item_2"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_1.item_2_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_1.item_3"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_1.item_3_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_1.item_4"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_1.item_4_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="main-section"><div id="main-content" class="container"></br></div></section>
-
-      <section id="speciality_2" class="os-no-striped os-section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="os-section-title">
-                <h1 data-localize="speciality_2.title" >speciality_2</h1>
-              </div>
-            </div>
-            <div class="col-md-8 os-border-left os-green-links">
-              <div class="os-section-content">
-                <p class="lead" data-localize="speciality_2.item_generale" >speciality_2 explanation</p>
-                <ul>
-                  <li>
-                    <span class="item" data-localize="speciality_2.item_1"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_2.item_1_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_2.item_2"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_2.item_2_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_2.item_3"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_2.item_3_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_2.item_4"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_2.item_4_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_2.item_5"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_2.item_5_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_2.item_6"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_2.item_6_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="main-section"><div id="main-content" class="container"></br></div></section>
-
-      <section id="speciality_3" class="os-no-striped os-section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="os-section-title">
-                <h1 data-localize="speciality_3.title" >speciality_3</h1>
-              </div>
-            </div>
-            <div class="col-md-8 os-border-left os-green-links">
-              <div class="os-section-content">
-                <p class="lead" data-localize="speciality_3.item_generale" >speciality_3 explanation</p>
-                <ul>
-                  <li>
-                    <span class="item" data-localize="speciality_3.item_1"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_3.item_1_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_3.item_2"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_3.item_2_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_3.item_3"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_3.item_3_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_3.item_4"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_3.item_4_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_3.item_5"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_3.item_5_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_3.item_6"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_3.item_6_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_3.item_7"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_3.item_7_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_3.item_8"><strong>1.Specifications & Schedule:</strong></span>
-                    <span class="under_item" data-localize="speciality_3.item_8_1"> Captina help you identify your needs, and answer the need, not the question !</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="main-section"><div id="main-content" class="container"></br></div></section>
-
-      <section id="speciality_4" class="os-no-striped os-section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="os-section-title">
-                <h1 data-localize="speciality_4.title" >speciality_4</h1>
-              </div>
-            </div>
-            <div class="col-md-8 os-border-left os-green-links">
-              <div class="os-section-content">
-                <p class="lead" data-localize="speciality_4.item_generale" >speciality_4 explanation</p>
-                <ul>
-                  <li>
-                    <span class="item" data-localize="speciality_4.item_1"><strong>1.Specifications & Schedule:</strong></span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_4.item_2"><strong>1.Specifications & Schedule:</strong></span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_4.item_3"><strong>1.Specifications & Schedule:</strong></span>
-                  </li>
-                  <li>
-                    <span class="item" data-localize="speciality_4.item_4"><strong>1.Specifications & Schedule:</strong></span>
-                  </li>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="main-section"><div id="main-content" class="container"></br></div></section>
-
-      <section id="references_1" class="os-no-striped os-section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md-4">
-              <div class="os-section-title">
-                <h1 data-localize="references_1.title" >Titre</h1>
-              </div>
-            </div>
-            <div class="col-md-8 os-border-left os-green-links">
-              <div class="os-section-content">
-                <p class="lead" data-localize="references_1.item_generale" >Item general</p>
-                <ul>
-                  <li>
-                    <div class="item" data-localize="references_1.item_1"><strong>Item</strong></div>
-                      <ul>
-                        <li><div class="under_item" data-localize="references_1.item_1_1"> item_1_1</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_1_2"> item_1_2</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_1_3"> item_1_3</div></li>
-                      </ul>
-                  </li>
-                  <li>
-                    <div class="item" data-localize="references_1.item_2"><strong>Item</strong></div>
-                      <ul>
-                        <li><div class="under_item" data-localize="references_1.item_2_1"> item_2_1</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_2_2"> item_2_2</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_2_3"> item_2_3</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_2_4"> item_2_4</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_2_5"> item_2_5</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_2_6"> item_2_6</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_2_7"> item_2_7</div></li>
-                      </ul>
-                  </li>
-                  <li>
-                    <div class="item" data-localize="references_1.item_3"><strong>Item</strong></div>
-                      <ul>
-                        <li><div class="under_item" data-localize="references_1.item_3_1"> item_3_1</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_3_2"> item_3_2</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_3_3"> item_3_3</div></li>
-                        <li><div class="under_item" data-localize="references_1.item_3_4"> item_3_4</div></li>
-                      </ul>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="main-section"><div id="main-content" class="container"></br></div></section>
-
-      <section id="contact" class="os-striped os-section">
-        <div class="container-fluid">
-          <div class="row">
-            <div class="os-nocolor-links">
-              <div class="col-sm-3"></div>
-              <div class="col-xs-4 col-sm-1">
-                <a href="https://www.facebook.com/aurelien.bouin" target="_blank"><i class="fab fa-facebook-square fa-3x"></i></a>
-              </div>
-              <div class="col-xs-4 col-sm-1">
-                <a href="https://twitter.com/aurelihein" target="_blank"><i class="fab fa-twitter-square fa-3x"></i></a>
-              </div>
-              <div class="col-xs-4 col-sm-1">
-                <a href="https://www.linkedin.com/in/aurelien-bouin" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
-              </div>
-              <div class="col-xs-4 col-sm-1">
-                <a href="https://github.com/aurelihein" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
-              </div>
-              <div class="col-xs-4 col-sm-1">
-                <a href="mailto:aurelien.bouin@captina.dev?subject=Browsing your website&body=I found your contact on your website, and I am interesed in working with you ..."><i class="fas fa-envelope-square fa-3x"  style="color:#000000;"></i></a>
-              </div>
-              <div class="col-xs-4 col-sm-1">
-                <a href="skype:aurelihein?call" target="_blank"><i class="fab fa-skype fa-3x"></i></a>
-              </div>
-              <div class="col-sm-3"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    <footer class="os-footer">
-      <div class="container os-centered">
-        <div class="row">
-          <div class="col-sm-8 col-sm-offset-2">
-            <p data-localize="main.author" >CAPTINA SARL - Developed by Aurélien BOUIN-aurelihein</p>
-            <p data-localize="main.siret" >SIRET:</p>
-          </div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="js/jquery.min.js"></script>
-    <script src="js/jquery.localize.min.js" type="text/javascript" charset="utf-8"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/perfect-scrollbar-mousewheel.min.js"></script>
-    <script src="js/perfect-scrollbar.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/session.js"></script>
-  </body>
+  <script src="js/main.js" defer></script>
+</body>
 </html>
